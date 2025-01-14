@@ -47,7 +47,7 @@ bool ERCF::Read(){
     while (bus_->available()) {
         c_ = bus_->read();
         if (state_ == HEADER1_POS_) {
-            if (c_ == MATEK_HEADER1_) {
+            if (c_ == ERCF_HEADER1_) {
                 state_++;
             }
             else {
@@ -56,7 +56,7 @@ bool ERCF::Read(){
         }
 
         else if (state_ == HEADER2_POS_) {
-            if (c_ == MATEK_HEADER2_) {
+            if (c_ == ERCF_HEADER2_) {
                 state_++; 
             }
             else {
@@ -76,7 +76,7 @@ bool ERCF::Read(){
                 state_ = 0;
                 ERCF_BYTE_COUNTER_ = 0;
 
-                for (i=0; i<ERCF_FRAME_SIZE_; i++){
+                for (int i=0; i<ERCF_FRAME_SIZE_; i++){
                     angle_.byteArray[i] = buf_[i];
                 }
                 return true;
