@@ -58,11 +58,11 @@ class ERCF {
   static constexpr uint8_t HEADER2_POS_ = 1;
 
   /* Driver state parameters*/
-  static uint8_t ERCF_FRAME_SIZE_ = 4;
-  static uint8_t ERCF_BYTE_COUNTER_ = 0;
+  const static uint8_t ERCF_FRAME_SIZE_ = 4;
+  uint8_t ERCF_BYTE_COUNTER_ = 0;
   uint8_t c_;
   uint8_t state_ = 0;
-  uint8_t buf_[ERCF_FRAME_SIZE];
+  uint8_t buf_[ERCF_FRAME_SIZE_];
 
 };
 
