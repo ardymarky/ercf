@@ -48,7 +48,7 @@ class ERCF {
   HardwareSerial *bus_;
   elapsedMillis t_ms_;
   /* Data */
-  typedef union {float angle_uart; byte byteArray[4];} union_float;
+  typedef union {float angle_uart; uint8_t byteArray[4];} union_float;
   union_float angle_;
   /* Parser */
   static constexpr uint8_t ERCF_HEADER1_ = 0x69;
