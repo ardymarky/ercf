@@ -17,7 +17,7 @@ if (DEFINED MCU)
     LANGUAGES CXX
   )
   # Grab the processor and set up definitions and compile options
-  include(${mcu_support_SOURCE_DIR}/cmake/config_mcu.cmaFerke)
+  include(${mcu_support_SOURCE_DIR}/cmake/config_mcu.cmake)
   configMcu(${MCU} ${mcu_support_SOURCE_DIR})
   # Fetch core
   FetchContent_Declare(
