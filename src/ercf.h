@@ -44,7 +44,7 @@ class ERCF {
  private:
   /* Communication */
   static constexpr int16_t COMM_TIMEOUT_MS_ = 5000;
-  static constexpr int32_t BAUD_ = 115200;
+  static constexpr int32_t BAUD_ = 9600;
   HardwareSerial *bus_;
   elapsedMillis t_ms_;
   /* Data */
